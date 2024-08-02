@@ -14,7 +14,7 @@ module.exports = {
     devServer: {
         static: path.join(__dirname, 'dist'),
         compress: true,
-        port: 9000,
+        port: 8080,
         hot: false,
         liveReload: true,
     },
@@ -29,8 +29,12 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                test: /\.html$/i,
+                use: ['raw-loader'],
+            },
+            {
+                test: /\.css$/i,
+                use: ['raw-loader'],
             },
         ],
     },

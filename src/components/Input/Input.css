@@ -1,0 +1,19 @@
+input {
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    outline: none;
+    flex: 1;
+    transition: border-color 0.3s;
+    align-self: center;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
